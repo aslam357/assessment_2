@@ -1,0 +1,25 @@
+<odoo>
+    <template id = "report_saleorder_document_inherit_dimension" 
+        inherit_id ="sale.report_saleorder_document">
+        <xpath expr="//table[@class='table table-sm']//thead/tr" position="after">
+                <th>Height</th>
+                <th>Width</th>
+                <th>m2</th>
+                <th>Net Total</th>
+        </xpath> 
+        <xpath expr="//table[@class='table  table-sm']//tbody/tr/td[@name='name]" position="after">
+                <td>
+                <span t-field = "l.height"/>
+                </td> 
+                <td>
+                <span t-field = "l.width"/>
+                </td> 
+                <td>
+                <span t-field = "l.m2"/>
+                </td> 
+                <td>
+                <span t-field = "l.net_total"/>
+                </td> 
+        </xpath>
+    </template>
+</odoo>
